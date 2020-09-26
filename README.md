@@ -82,7 +82,23 @@ Download the SRA file cliking on the link: https://sra-download.ncbi.nlm.nih.gov
 **Run `sra_to_fastq.nf` script**
 - Create a data folder in your working directory.
 - Move your SRA file into it. Optionally add the extension ".sra" to the SRA file. (*Modify or not the channel value defined line 3 in consequence.*)
-- Run : nextflow run sra_to_fastq.nf -process.echo
+- Run : `nextflow run sra_to_fastq.nf -process.echo`
+- Output:
+
+`
+N E X T F L O W  ~  version 20.07.1
+Launching `sra_to_fastq.nf` [confident_knuth] - revision: 8ef02477bc
+executor >  local (1)
+[4d/02000d] process > SRAToFastq (1) [100%] 1 of 1 ✔
+Read 101597658 spots for SRR7646230.sra
+Written 101597658 spots for SRR7646230.sra
+
+Completed at: 26-sept.-2020 18:16:24
+Duration    : 14m 34s
+CPU hours   : 0.2
+Succeeded   : 1
+`
+
 
 
 
