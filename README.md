@@ -1,4 +1,26 @@
 # NextFlowClassesINSA
+## Installation of NextFlow
+Follow the instruction given at : 
+
+https://seqera.io/training/
+
+you should at least have :
+
+ - Java from v8 to v12
+ - Curl 
+ - Nextflow
+
+ To install NextFlow you just need to run the following command :
+
+`curl get.nextflow.io | bash`
+
+Move NextFlow to your bin directory and update the path.
+
+To be sure that NextFlow has been add to your path in a terminal run:
+
+`nextflow info`
+
+
 ## Check your installation
 To check that Nextflow is correctly installed on machine run hello.nf with the following command:
 
@@ -14,3 +36,55 @@ WORLD!
 HELLO
 
 `
+
+## Analysis of RNA Seq data
+### Step 1: Get a Fastq file of transcriptomic data
+#### Option 1: Using fromSRA Channel
+
+In order to do so:
++ Create a NCBI account: https://www.ncbi.nlm.nih.gov/account/?back_url=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fsra%2Fdocs%2Fsubmitformats%2F
+
++ Generate API key: going into your personal space
+
+
+**Update `get_fastq_from_SRA.nf` script**
+
++ Modify the value of the paramater line 1 with your personal NCBI API Key.
++ Choose a sample ID of your choice from the project "Transcriptomic profiling of human Lung Carcinoids (LCs)" at https://www.ncbi.nlm.nih.gov//sra/?term=SRP156394. Example of sample ID: **SRR7646230** (Lu-Aty3 Atypical Carcinoids (ACs)). 
++ Modify the line 3 with the sample ID of your choice
++ Run the followig command line: 
+
+`nextflow run get_fastq_from_SRA.nf 
+
+You could also redefine the parameter value in the command line running:
+
+`nextflow run get_fastq_from_SRA.nf  --ncbi_api_key  '0123456789`
+
+**WARNING** To run this script you must have Nextflow 20.09 >
+
+#### Option 2: Using SRAToolkit
+- Download SRAToolkit at:
+
+https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software
+
+- Extract the archive
+- Edit your paths adding a path toward the binary folder of SRAToolkit
+- Choose a sample ID of your choice from the project "Transcriptomic profiling of human Lung Carcinoids (LCs)" at https://www.ncbi.nlm.nih.gov//sra/?term=SRP156394. Example of sample ID: **SRR7646230** (Lu-Aty3 Atypical Carcinoids (ACs)). 
+- Download the SRA file : 
+
+For example at:
+https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR7646230
+
+Download the SRA file cliking on the link: https://sra-download.ncbi.nlm.nih.gov/traces/sra69/SRR/007467/SRR7646230
+
+**WARNING** Be sure that you have enough memory one transcriptome = 13GB! 
+
+**Run `sra_to_fastq.nf` script**
+- Create a data folder in your working directory.
+- Move your SRA file into it. Optionally add the extension ".sra" to the SRA file. (*Modify or not the channel value defined line 3 in consequence.*)
+- Run : nextflow run sra_to_fastq.nf -process.echo
+
+
+
+
+
