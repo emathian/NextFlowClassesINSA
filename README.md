@@ -113,9 +113,28 @@ SRR7646230.fastq	SRR7646230.sra
 @SRR7646230.1 HS2000-1241:190:C28W3ACXX:1:1101:4025:2247 length=200
 GCAGAATAGAGGGGTCTGGGACATGGACCCAGACTAAACCAGCCATCCTGGAGGGCAGGCATCAGGGTGGGGCTGAAAGCCCCGATCCCACTCTGGGAATGGCCGGAGGGACCCCAGACCTTCAGAGGGCTGCCCTGGTGTTCTCCACAGTGCAGTCCCTCTGTATTCCCAGAGTGGGATCGGGGCTTTCAGCCCCACCC
 +SRR7646230.1 HS2000-1241:190:C28W3ACXX:1:1101:4025:2247 length=200
+`
 
+### Quality control 
+#### Installation of FastQC
+Follow the instructions at:
 
+http://www.bioinformatics.babraham.ac.uk/projects/fastqc/INSTALL.txt
 
+#### Run generate_fastqc.nf
+
++ Move your fastq file or modify the line 1
++ `nextflow run generate_fastqc.nf `
++ In $PWD/WORK you will find the results in html or into the zip file.
+
+Example:
+
+Per base quality            |  Per sequence GC content
+:-------------------------:|:-------------------------:
+![](./Images/per_base_quality.png  =100x)  |  ![](./Images/per_sequence_gc_content.png  =100x)
+Per base sequence content            |  Per sequence quality
+:-------------------------:|:-------------------------:
+![](./Images/per_base_sequence_content.png  =100x)  |  ![](./Images/per_sequence_quality.png  =100x)
 
 
 
