@@ -131,7 +131,7 @@ Example:
 
 Per base quality            |  Per sequence GC content
 :-------------------------:|:-------------------------:
-![](./Images/per_base_quality.png  =100x)  |  ![](./Images/per_sequence_gc_content.png  =100x)
+![](./Images/per_base_quality.png )  |  ![](./Images/per_sequence_gc_content.png )
 Per base sequence content            |  Per sequence quality
 :-------------------------:|:-------------------------:
 ![](./Images/per_base_sequence_content.png  =100x)  |  ![](./Images/per_sequence_quality.png  =100x)
