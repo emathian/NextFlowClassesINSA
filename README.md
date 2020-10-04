@@ -137,4 +137,37 @@ Per base sequence content            |  Per sequence quality
 ![](./Images/per_base_sequence_content.png)  |  ![](./Images/per_sequence_quality.png)
 
 
+## Sequence Trimming
+
+### Installation of Trim Galore
++ Install `cutadapt`:
+	+ `python3 -m pip install --user --upgrade cutadapt`
+	+ Add it to your paths: `~/.local/bin/cutadapt --help`
+	+ Check your installation: `cutadapt --version`
++ Check facstQC installation: `fastqc -v`
++ Install TrimGalore:
+	+`curl -fsSL https://github.com/FelixKrueger/TrimGalore/archive/0.6.6.tar.gz -o trim_galore.tar.gz
+		tar xvzf trim_galore.tar.gz`
+	+ Add it to your path
+	+ Check your installation: `~/TrimGalore-0.6.6/trim_galore`
+
+### Trim the transcriptome 
+Using trim galore you have to define the sequencing method (illumina) to trim the adaptors and the minimal quality defining the trimming threshold (20).
+You can run the script `trimming.nf` which will also provide the quality control of the fasta file trimmed.
+
+`nextflow run trimming.nf -resume -with-timeline`
+
+*a timeline of the processes will be generated*
+
+### Quality control of the trimmed sequences:
+
+Per base quality            |  Per sequence GC content
+:-------------------------:|:-------------------------:
+![](./Images/trimeed/Images/per_base_quality.png )  |  ![](./Images/trimeed/Images/per_sequence_gc_content.png )
+Per base sequence content            |  Per sequence quality
+:-------------------------:|:-------------------------:
+![](./Images/trimeed/Images/per_base_sequence_content.png)  |  ![](./Images/trimeed/Images/per_sequence_quality.png)
+
+
+
 
