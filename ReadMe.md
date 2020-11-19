@@ -22,7 +22,7 @@
 
 `conda install -c bioconda salmon`
 
-Check if the package is correctly installed running: `salmon --version` in a terminal the expected output is `version : 0.8.1`, if not try `conda install -c bioconda/label/cf201901 salmon`
+Check if the package is correctly installed running: `salmon --version` in a terminal the expected output is `version : 0.8.1`, if not try `conda install -c bioconda/label/cf201901 salmon`.
 </ol>
 
 
@@ -106,6 +106,7 @@ Hello world!`
 **Hints:**
 - A directive is state inside a process.
 - An output should follow the pattern:
+
 `output: <output qualifier> <output name> into <target channel>[,channel,..]`.
 - The output qualifier to catch the outputs from the command `echo` is `stdout`.
 
