@@ -126,6 +126,7 @@ You will create a pipeline aiming at mapping RNAseq paired reads to a reference 
 <li> Create an `environment.yml` file specifying that Salmon is requested. 
 <li> To use the command <code>-profile conda</code>, you should create a <code>nextflow.config</code> file.
 </ol>
+
 ___
 
 **Hints:**
