@@ -156,6 +156,7 @@ executor >  local (4)
 [46/7bdec3] process > IndexRef (1) [100%] 1 of 1 ✔
 [93/3f625d] process > Mapping (1)  [100%] 3 of 3 ✔
 `
+
 **Hints:**
 
 - A type of channel is named fromFilePairs :)!
