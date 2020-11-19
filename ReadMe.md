@@ -21,6 +21,7 @@
 <li> Install the speudo aligner Salmon:
 
 `conda install -c bioconda salmon`
+
 Check if the package is correctly installed running: `salmon --version` in a terminal the expected output is `version : 0.8.1`, if not try `conda install -c bioconda/label/cf201901 salmon`
 </ol>
 
