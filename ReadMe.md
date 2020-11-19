@@ -1,4 +1,4 @@
-# Practical 1: Developing and deploying an open-source medical genomic bioinformatic workflow
+# Practical 1: Developing and deploying an open-source medical genomic bioinformatics workflow
 
 - use the Nextflow DSL to run parallel, scalable analyses on High Performance Computing and cloud computing facilities
 - efficient use of github for open-source development and Continuous Integration automated tests
@@ -18,7 +18,7 @@
 <li> Install Singularity such as:
 
 `conda install -c conda-forge singularity`
-<li> Install the speudo aligner Salmon:
+<li> Install the pseudo aligner Salmon:
 
 `conda install -c bioconda salmon`
 
@@ -57,15 +57,15 @@ Have a look at the [NextFlow tutorial](https://seqera.io/training/).
 
 *What is [singularity](https://sylabs.io/guides/3.6/user-guide/)?* *Maybe to delete if we use conda.*
 
-## How to use the available ressources?
+## How to use the available resources?
 
-<span style='color:#0000b3'>**Question 1:**</span> Create a working directory and clone inside the github repository https://github.com/IARCbioinfo/data_test.git. A data test set is particulary useful to develop bioinformatics tools. Can you explain why? 
+<span style='color:#0000b3'>**Question 1:**</span> Create a working directory and clone inside the github repository https://github.com/IARCbioinfo/data_test.git. A data test set is particularly useful to develop bioinformatics tools. Can you explain why? 
 
 <span style='color:#0000b3'>**Question 2:**</span>  Browse the repository https://github.com/IARCbioinfo/RNAseq-nf and run the pipeline.
 ___
 
 **Hints:** 
-- Nextflow allow executing of a pipeline directly from a GitHub repository.
+- Nextflow allows executing of a pipeline directly from a GitHub repository.
 - To run a pipeline you need to call the right computational environment.
 - What are the mandatory parameters?
 - What are the optional parameters that can be useful?
@@ -87,7 +87,7 @@ Succeeded   : 14`
 
 <span style='color:#0000b3'>**Question 3:**</span> While the pipeline is running ...
 
-Try to create your first nexflow script. Call it "HelloWorld.nf". This sctipt should contain:
+Try to create your first Nexflow script. Call it "HelloWorld.nf". This script should contain:
 - A parameter named greeting equivalent to "Hello world!";
 - A queue channel built from the previous parameter;
 - A process that includes:
@@ -146,8 +146,8 @@ ___
 ___
 <span style='color:#0000b3'>**Question 7:**</span>  Create a Nextflow script to quantify the sets of paired reads using Salmon:
 - Write a new process in the previous script;
-- The output from the indexing process must be convert into a parameter;
-- Create a directive specifying the number of cpus to use;
+- The output from the indexing process must be converted into a parameter;
+- Create a directive specifying the number of CPUs to use;
 - The output files should be in a directory named `Alignments`
 
 **Expected outputs:**
@@ -167,4 +167,4 @@ ___
 <span style='color:red'>**Question 8:**</span> How many reads have been mapped for the sample NA06984_T_RG1?
 
 <span style='color:#0000b3'>**Question Bonus:**</span> 
-Do you have a better idea than creating a prameter targetting the index folder? How can the output channel from the indexing process, can be used in order to run the quantification process **for each** sample?
+Do you have a better idea than creating a parameter targetting the index folder? How can the output channel from the indexing process, can be used in order to run the quantification process **for each** sample?
