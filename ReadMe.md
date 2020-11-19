@@ -126,22 +126,24 @@ You will create a pipeline aiming at mapping RNAseq paired reads to a reference 
 <li> Create an `environment.yml` file specifying that Salmon is requested. 
 <li> To use the command <code>-profile conda</code>, you should create a <code>nextflow.config</code> file.
 </ol>
-
+___
 **Hints:**
 
 - Have a glance at the corresponding files on the [Iarc RNAseq_Github repository](https://github.com/IARCbioinfo/RNAseq-nf)
+___
 
 <span style='color:#0000b3'>**Question 6:**</span>  Create a Nextflow script allowing indexing the reference genome with Salmon.
 - Use the directive `publishDir` to **copy** the output files in a folder named `INDEX`;
 - The input declarative block targets the reference genome file;
 - The output declarative block creates a channel receiving the outputs from Salmon.
+___
 
 **Hints:**
 
 - The reference genome is in "data_test/REF/ctat_genome_lib_build_dir_TP53/ref_genome.fa";
 - Have a glance at [publishDir](https://www.nextflow.io/docs/latest/process.html#publishdir) documentation.
 - The qualifier of the output channel should be `file` or `path`.
-
+___
 <span style='color:#0000b3'>**Question 7:**</span>  Create a Nextflow script to quantify the sets of paired reads using Salmon:
 - Write a new process in the previous script;
 - The output from the indexing process must be convert into a parameter;
@@ -166,6 +168,3 @@ executor >  local (4)
 
 <span style='color:#0000b3'>**Question Bonus:**</span> 
 Do you have a better idea than creating a prameter targetting the index folder? How can the output channel from the indexing process, can be used in order to run the quantification process **for each** sample?
-<div class="text-purple">
-  This text is purple, <a href="#" class="text-inherit">including the link</a>
-</div>
