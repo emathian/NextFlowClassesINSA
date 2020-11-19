@@ -166,3 +166,6 @@ executor >  local (4)
 
 <span style='color:#0000b3'>**Question Bonus:**</span> 
 Do you have a better idea than creating a prameter targetting the index folder? How can the output channel from the indexing process, can be used in order to run the quantification process **for each** sample?
+<div class="text-purple">
+  This text is purple, <a href="#" class="text-inherit">including the link</a>
+</div>
