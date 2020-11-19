@@ -162,7 +162,7 @@ executor >  local (4)
 - A type of channel is named fromFilePairs :)!
 - Salmon has an optional argument which is `--threads`.
 
-<span style='color:#0000b3'>**Question 8:**</span> How many reads have been mapped for the sample NA06984_T_RG1?
+<span style='color:red'>**Question 8:**</span> How many reads have been mapped for the sample NA06984_T_RG1?
 
 <span style='color:#0000b3'>**Question Bonus:**</span> 
 Do you have a better idea than creating a prameter targetting the index folder? How can the output channel from the indexing process, can be used in order to run the quantification process **for each** sample?
