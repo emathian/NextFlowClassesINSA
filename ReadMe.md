@@ -120,7 +120,7 @@ You will create a pipeline aiming at mapping RNAseq paired reads to a reference 
 **Question 5:** [Salmon](https://salmon.readthedocs.io/en/latest/) will be used as a pseudo aligner tool.
 <ol>
 <li> Create an "environment.yml" file specifying that salmon is requested. 
-<li> In order to used the command <code>-profile conda</code>. you should create a <code>nextflow.config<code> file.
+<li> In order to used the command <code>-profile conda</code>. you should create a <code>nextflow.config</code> file.
 </ol>
 
 **Hints:**
