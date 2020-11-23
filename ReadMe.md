@@ -95,6 +95,7 @@ Try to create your first Nexflow script. Call it "HelloWorld.nf". This script sh
     + An input declaration block built from the queue channel;
     + An output declaration block that creates a channel from the outputs of the "echo" command;
     + A bash process that should "echo" the input channel's value.
+    + The output channel must be printed.
 
 Run this script with the command line: `nextflow run HelloWorld.nf`. 
 

@@ -1,0 +1,24 @@
+
+*Kahoo questions 2:
+
+- Why is there any instruction in the singularity files to install packages?
+- From which chromosome the Fastq files come from?
+- Why are there two fastq files associated to each individual?
+- What is a bed file?
+- What is missing in the data_test repository? A readme file ^^*
+*Kahoo questions 3:
+- How to print "Bonjour le monde!* without modifying the script?
+- A queue channel as the following specificities?*
+
+
+*Kahoo questions 5:
+
+- What is the main difference between an aligner (like STAR) and a speudo aligne (like Salmon or Kallisto)
+- Why indexing the reference genome (or transcriptome) is essential?*
+
+*Kahoo questions 6:
+- What is the difference between a queue channel and a value channel or a parameter?*
+
+*Kahoo questions 7: 
+- How many time will the quantifying process be run ?
+- Running a nextflow script what does the option `-resume` show?*

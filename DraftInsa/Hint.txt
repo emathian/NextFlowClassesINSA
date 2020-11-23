@@ -1,0 +1,41 @@
+##################################################################################
+#                                   HINTS
+##################################################################################
+___
+
+**Hints q2 Browse the repository https://github.com/IARCbioinfo/RNAseq-nf and run the pipeline.:** 
+- Nextflow allows executing of a pipeline directly from a GitHub repository.
+- To run a pipeline you need to call the right computational environment.
+- What are the mandatory parameters?
+- What are the optional parameters that can be useful?
+___
+
+___
+**Hints q3 While the pipeline is running  Hello World:**
+
+- A directive is stated inside a process.
+- An output block follows the pattern:
+`output: <output qualifier> <output name> into <target channel>[,channel,..]`.
+- The output qualifier to catch the outputs from the command `echo` is `stdout`.
+___
+
+___
+
+**Hints q5 Create an `environment.yml` file specifying that Salmon is requested. :**
+- Have a glance at the corresponding files on the [Iarc RNAseq_Github repository](https://github.com/IARCbioinfo/RNAseq-nf)
+___
+
+___
+
+**Hints q6 Create a Nextflow script allowing indexing the reference genome with Salmon.:**
+- The reference genome is in "data_test/REF/ctat_genome_lib_build_dir_TP53/ref_genome.fa";
+- Have a glance at [publishDir](https://www.nextflow.io/docs/latest/process.html#publishdir) documentation.
+- The qualifier of the output channel should be `file` or `path`.
+___
+
+___
+**Hints q7 Create a Nextflow script to quantify the sets of paired reads using Salmon:**
+
+- A type of channel is named fromFilePairs :)!
+- Salmon has an optional argument which is `--threads`.
+___
